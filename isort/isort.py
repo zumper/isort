@@ -34,8 +34,6 @@ if TYPE_CHECKING:
             "above": CommentsAboveDict,
         },
     )
-
-
 class _SortImports:
     _import_line_intro_re = re.compile("^(?:from|import) ")
     _import_line_midline_import_re = re.compile(" import ")
