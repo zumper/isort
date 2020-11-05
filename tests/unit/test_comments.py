@@ -10,6 +10,12 @@ def test_add_to_line():
     )
 
 
+def test_parse():
+    assert isort.comments.parse("import os  # comment") == ("import os", "comment")
+    assert isort.comments.parse("import os       # comment") == ("import os", "comment")
+    assert isort.comments.parse("import os") == ("import os", "")
+
+
 # These tests were written by the `hypothesis.extra.ghostwriter` module
 # and is provided under the Creative Commons Zero public domain dedication.
 
